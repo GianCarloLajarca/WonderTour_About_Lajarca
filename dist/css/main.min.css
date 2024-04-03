@@ -1,19 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Sixtyfour&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img, video, picture, svg {
-  display: block;
-  max-width: 100%;
-}
-
-body {
-  min-height: 100vh;
-}
-
 @font-face {
   font-family: "montserrat-regular";
   src: url("../../fonts/Montserrat-Regular.woff2");
@@ -113,6 +98,21 @@ p {
   max-width: 98rem;
   padding: 0 1.6rem;
   margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, video, picture, svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
 }
 
 .bg-primary {
