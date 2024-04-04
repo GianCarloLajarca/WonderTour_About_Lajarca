@@ -544,6 +544,28 @@ p {
   box-sizing: border-box;
 }
 
+.tns-controls {
+  position: absolute;
+  z-index: 999;
+}
+@media (min-width: 1600px) {
+  .tns-controls {
+    top: 15rem;
+    bottom: 30rem;
+    left: -6rem;
+    display: flex;
+    gap: 181rem;
+  }
+}
+.tns-controls button {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #cdcdcd;
+}
+
 @keyframes bgPos {
   25% {
     transform: translate3d(-150px, -150px, 0) rotate(0.001deg);
@@ -556,6 +578,15 @@ p {
   animation: bgPos 1s 100s linear infinite;
 }
 
+@media (min-width: 1600px) {
+  .breadcrumbs {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
 .breadcrumbs__wrapper {
   position: relative;
   overflow: hidden;
@@ -563,6 +594,11 @@ p {
   text-align: center;
   background-color: #cccccc;
   z-index: 1;
+}
+@media (min-width: 1200px) {
+  .breadcrumbs__wrapper {
+    padding: 150px 0;
+  }
 }
 .breadcrumbs__wrapper h2 {
   font-size: 32px;
@@ -1291,6 +1327,12 @@ p {
   box-sizing: border-box;
   text-align: center;
 }
+@media (min-width: 1600px) {
+  .destinations {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
 .destinations .container {
   width: 100%;
   padding-right: calc(var(15px) * 0.5);
@@ -1299,6 +1341,7 @@ p {
   margin-left: auto;
   box-sizing: border-box;
   text-align: center;
+  margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
   .destinations .container {
@@ -1378,13 +1421,6 @@ p {
   pointer-events: none;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
-  .destinations__item__content::after {
-    transform: scale(0.85);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 .destinations__image {
   display: block;
   box-sizing: border-box;
@@ -1429,14 +1465,6 @@ p {
   transition: all 0.3s ease-in-out;
   box-sizing: border-box;
 }
-@media (min-width: 992px) {
-  .destinations__caption a {
-    transform: translate3d(0, -10px, 0);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
-}
 .destinations__caption a img {
   display: none;
 }
@@ -1447,8 +1475,9 @@ p {
   font-style: normal;
   speak: none;
   text-transform: none;
-  content: "\f00e";
+  content: "\e0db";
   font-size: inherit;
+  font-family: "fl-bigmug-line";
   box-sizing: border-box;
   color: #fff;
 }
@@ -1509,6 +1538,12 @@ p {
   float: left;
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .testimonials__slider__item:hover .destinations__item__content::before {
+    opacity: 100;
+    visibility: visible;
+  }
 }
 .testimonials__quote {
   text-align: center;

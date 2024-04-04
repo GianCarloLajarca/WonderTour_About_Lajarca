@@ -146,3 +146,49 @@
     }
 }
 
+.tns-controls {
+    // @include flex (space-between, center);
+    // margin: 2rem 0;
+    // button {
+    //     background: transparent;
+    //     border: none;
+    //     font-size: 3rem;
+    //     color: $clr-light;
+    // }
+
+//     @include mediaQueryMax {
+//         position: static;
+//         @include flex (space-between, center);
+//        margin: 2rem 0;
+//        button {
+//         @include mediaQueryMax {
+//             font-size: 1.5rem;
+//         }
+
+//            background: transparent;
+//            border: none;
+//            font-size: 3rem;
+//            color: $clr-dark;
+//         }
+//    }
+
+    position: absolute;
+
+    @include mediaQuery__xxl {
+        top: 15rem;
+        bottom: 30rem;
+        left: -6rem;
+        display: flex ;
+        gap: 181rem;
+    }
+
+    z-index: 999;
+    button {
+      font-size: 3rem;
+      @include flex(center, center);
+      
+      border: none;
+      color: #cdcdcd
+    }
+
+}

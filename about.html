@@ -521,17 +521,34 @@
         items: 1,
         slideBy: "page",
         autoplay: false,
-        controls: false,
         autoplayButtonOutput: false,
+        mouseDrag: true,
         controlsText: [
-          '<i class="fas fa-arrow-left-long"></i>',
-          '<i class="fas fa-arrow-right-long"></i>',
+          '<i class="fa-solid fa-arrow-left-long"></i>',
+          '<i class="fa-solid fa-arrow-right-long"></i>',
         ],
         responsive: {
-          420: {
-            items: 3,
-            gutter: 20,
+          1200: {
+            items: 4,
+            gutter: 30,
+            nav: false,
+            
           },
+          
+        //   280: {
+        //     items: 4,
+        //     gutter: 30,
+        //     nav: true,
+            
+        //   },
+
+        //   768: {
+        //     items: 2,
+        //   }
+
+        //   992 {
+        //     items 3,
+        //   }
         },
         
       });
