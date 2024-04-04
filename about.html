@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.min.css">
+
 </head>
 <body>
     <!-- Breadcrumbs -->
@@ -20,7 +21,7 @@
                     <li class="active">About</li>
                 </ul>
             </div>
-            <div class="box-position" style="background-image: url(images/breadcrumbs-bg.jpg);"></div>
+            <div class="box-position bgPos" style="background-image: url(images/breadcrumbs-bg.jpg);"></div>
         </div>
     </section>
 
@@ -366,6 +367,8 @@
             <h3>What people Say</h3>
 
             <div class="testimonials__slider">
+
+                <div class="testimonials__slider__item">
                 <article class="testimonials__quote">
                     <div class="testimonials__quote__body">
                         <a class="testimonials__quote__profile" href="#">
@@ -384,7 +387,7 @@
                 </article>
             </div>
 
-            <div class="testimonials__slider">
+            <div class="testimonials__slider__item">
                 <article class="testimonials__quote">
                     <div class="testimonials__quote__body">
                         <a class="testimonials__quote__profile" href="#">
@@ -404,7 +407,7 @@
                 </article>
             </div>
 
-            <div class="testimonials__slider">
+            <div class="testimonials__slider__item">
                 <article class="testimonials__quote">
                     <div class="testimonials__quote__body">
                         <a class="testimonials__quote__profile" href="#">
@@ -423,6 +426,8 @@
                     </div>
                 </article>
             </div>
+            </div>
+            
         </div>
     </section>
 
@@ -455,7 +460,17 @@
                         </div>
                         
                     </div>
-        
+                    
+                    <div class="counter__item">
+                        <div class="counter__details">
+                            <div class="counter__number">
+                                <span>2K</span>
+                            </div>
+                        <h5>Travelers</h5>
+                        </div>
+                
+                    </div>
+
                     <div class="counter__item">
                             <div class="counter__details">
                                 <div class="counter__number">
@@ -508,6 +523,27 @@
         autoplay: false,
         controls: false,
         autoplayButtonOutput: false,
+        controlsText: [
+          '<i class="fas fa-arrow-left-long"></i>',
+          '<i class="fas fa-arrow-right-long"></i>',
+        ],
+        responsive: {
+          420: {
+            items: 3,
+            gutter: 20,
+          },
+        },
+        
+      });
+
+      var testimonials__slider = tns({
+        container: ".testimonials__slider",
+        items: 1,
+        slideBy: "page",
+        autoplay: true,
+        controls: false,
+        autoplayButtonOutput: false,
+        mode: "gallery",
       });
 
 </script>
