@@ -1213,6 +1213,10 @@
         box-sizing: border-box;
 
         img {
+            @include mediaQuery__xl {
+                display: block;
+                transform: translate3d(-50%, 145px, 0px);
+            }
             display: block;
             transform: translate3d(-50%, 83px, 0px);
 

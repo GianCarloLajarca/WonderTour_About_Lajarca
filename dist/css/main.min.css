@@ -1635,6 +1635,12 @@ p {
   overflow-clip-margin: content-box;
   overflow: clip;
 }
+@media (min-width: 1200px) {
+  .counter__material img {
+    display: block;
+    transform: translate3d(-50%, 145px, 0px);
+  }
+}
 .counter__content {
   position: relative;
   z-index: 1;
