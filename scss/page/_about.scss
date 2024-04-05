@@ -377,7 +377,10 @@
         @include mediaQuery__md {
            display: inline-block;
         }
-        //   margin-bottom: 10px;
+        @include mediaQueryMax__md {
+              margin-bottom: 10px;
+        }
+        
           float: none;
           border: 0;
           cursor: pointer;
@@ -802,7 +805,7 @@
                 }
 
                 li::before {
-                    background: $clr-accent;
+                    background: #50ba87;
                     height: 7px;
                     width: 7px;
                     margin-right: 8px;
@@ -1058,15 +1061,20 @@
             display: inline-block;
             font-weight: 400;
             font-style: normal;
-            speak: none;
+            // speak: none;
             text-transform: none;
-            content: "\e0db";
+            content: "\f00e";
             font-size: inherit;
             
-            font-family: 'fl-bigmug-line';
+            
             box-sizing: border-box;
             color: $clr-light;
         }
+
+        a::before:hover {
+            color: #495057;
+        }
+
     }
 
     &__description {
@@ -1344,7 +1352,7 @@
         }
 
         @include mediaQuery__md {
-            padding: 100px 0;
+            padding: 90px 0;
         }
 
         position: relative;
@@ -1408,8 +1416,11 @@
          }
 
          @include mediaQueryMax__lg {
+            margin-bottom: -72px;
             flex-wrap: wrap; 
          }
+
+
         margin-top: calc(-1* var(0));
         margin-right: calc(-.5* var(30px));
         margin-left: calc(-.5* var(30px));
@@ -1579,6 +1590,15 @@
             display: inline-block;
             box-sizing: border-box;
             color: $clr-light;
+            font-weight: 400;
+        }
+
+        .symbol {
+            @include mediaQuery__xl {
+                font-size: 70px;
+            }
+            font-size: 40px;
+            letter-spacing: 0;
         }
     }
 }

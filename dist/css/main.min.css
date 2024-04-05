@@ -942,6 +942,11 @@ p {
     display: inline-block;
   }
 }
+@media (max-width: 768px) {
+  .chooseUs .nav__item {
+    margin-bottom: 10px;
+  }
+}
 .chooseUs .nav__link {
   border-width: 1px 0 1px 0;
   border-style: solid;
@@ -1294,7 +1299,7 @@ p {
   box-sizing: border-box;
 }
 .chooseUs__mission__content ul li::before {
-  background: #01b3a7;
+  background: #50ba87;
   height: 7px;
   width: 7px;
   margin-right: 8px;
@@ -1521,13 +1526,14 @@ p {
   display: inline-block;
   font-weight: 400;
   font-style: normal;
-  speak: none;
   text-transform: none;
-  content: "\e0db";
+  content: "\f00e";
   font-size: inherit;
-  font-family: "fl-bigmug-line";
   box-sizing: border-box;
   color: #fff;
+}
+.destinations__caption a::before:hover {
+  color: #495057;
 }
 .destinations__description {
   margin-top: 30px;
@@ -1758,7 +1764,7 @@ p {
 }
 @media (min-width: 768px) {
   .counter__content {
-    padding: 100px 0;
+    padding: 90px 0;
   }
 }
 .counter__content .container {
@@ -1821,6 +1827,7 @@ p {
 }
 @media (max-width: 992px) {
   .counter__wrapper {
+    margin-bottom: -72px;
     flex-wrap: wrap;
   }
 }
@@ -1975,10 +1982,20 @@ p {
   display: inline-block;
   box-sizing: border-box;
   color: #fff;
+  font-weight: 400;
 }
 @media (min-width: 1200px) {
   .counter__number span {
     font-size: 110px;
+  }
+}
+.counter__number .symbol {
+  font-size: 40px;
+  letter-spacing: 0;
+}
+@media (min-width: 1200px) {
+  .counter__number .symbol {
+    font-size: 70px;
   }
 }
 
