@@ -410,6 +410,8 @@ p {
   overflow: visible;
   border: none;
   z-index: 1;
+  border-color: #01b3a7;
+  border: 2px solid;
 }
 
 .button__pipaluk::before {
@@ -482,12 +484,16 @@ p {
     margin-right: 4px;
   }
 }
+.destinations .tns-outer .tns-nav button:hover {
+  background-color: #000;
+}
 .destinations .tns-outer .tns-nav button.tns-nav-active {
   background-color: #01b3a7;
 }
 
 .testimonials .tns-outer {
   position: relative;
+  z-index: 3;
   overflow: hidden;
   -webkit-transform: translate3d(0px, 0px, 0px);
   box-sizing: border-box;
@@ -517,6 +523,9 @@ p {
   margin-right: 6px;
   outline: none;
   transition: 0.2s;
+}
+.testimonials .tns-outer .tns-nav button:hover {
+  background-color: #000;
 }
 .testimonials .tns-outer .tns-nav button.tns-nav-active {
   background-color: #01b3a7;
@@ -564,6 +573,10 @@ p {
   align-items: center;
   border: none;
   color: #cdcdcd;
+}
+.tns-controls button:hover {
+  color: #01b3a7;
+  transition: 0.33s all ease;
 }
 
 @keyframes bgPos {
@@ -654,6 +667,9 @@ p {
   display: inline;
   vertical-align: middle;
   transition: all 0.3s ease-in-out;
+}
+.breadcrumbs__wrapper a:hover {
+  text-decoration: underline;
 }
 .breadcrumbs__wrapper li:nth-child(1)::after {
   content: "/";
@@ -861,16 +877,7 @@ p {
   .chooseUs__details h1 {
     font-size: 64px;
     line-height: 1.2;
-  }
-}
-@media (min-width: 992px) {
-  .chooseUs__details h1 {
-    font-size: 54px;
-  }
-}
-@media (min-width: 768px) {
-  .chooseUs__details h1 {
-    font-size: 46px;
+    text-align: left;
   }
 }
 .chooseUs__tabs {
@@ -890,6 +897,12 @@ p {
   flex-wrap: wrap;
   padding-left: 0;
   list-style: none;
+}
+@media (min-width: 1600px) {
+  .chooseUs .nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .chooseUs .nav__tabs {
   font-size: 0;
@@ -970,7 +983,7 @@ p {
   }
 }
 .chooseUs .nav__link:hover {
-  color: #016760;
+  color: #01b3a7;
 }
 @media (min-width: 768px) {
   .chooseUs .nav__link::after {
@@ -1388,6 +1401,26 @@ p {
   box-sizing: border-box;
   display: block;
 }
+@media (min-width: 992px) {
+  .destinations__item__content:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (min-width: 992px) {
+  .destinations__item__content:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+@media (min-width: 992px) {
+  .destinations__item__content:hover .destinations__icon {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
 .destinations__item__content::before {
   position: absolute;
   content: "";
@@ -1420,6 +1453,13 @@ p {
   transition: inherit;
   pointer-events: none;
   box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .destinations__item__content::after {
+    transform: scale(0.85);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 .destinations__image {
   display: block;
@@ -1464,6 +1504,14 @@ p {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .destinations__caption a {
+    transform: translate3d(0, -10px, 0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
 }
 .destinations__caption a img {
   display: none;
@@ -1521,9 +1569,15 @@ p {
   box-sizing: border-box;
 }
 .testimonials h3 {
+  text-align: center;
   font-size: 28px;
   line-height: 1.2;
-  white-space: nowrap;
+}
+@media (min-width: 992px) {
+  .testimonials h3 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
 }
 .testimonials__slider {
   position: relative;
@@ -1539,6 +1593,10 @@ p {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
 }
+.testimonials__slider__item:nth-child(1) .testimonials__quote__text p {
+  padding-left: 16px;
+  padding-right: 16px;
+}
 @media (min-width: 992px) {
   .testimonials__slider__item:hover .destinations__item__content::before {
     opacity: 100;
@@ -1553,6 +1611,18 @@ p {
   box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.17);
   box-sizing: border-box;
   display: block;
+}
+@media (min-width: 992px) {
+  .testimonials__quote {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 576px) {
+  .testimonials__quote {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .testimonials__quote__body {
   max-width: 880px;
@@ -1910,4 +1980,17 @@ p {
   .counter__number span {
     font-size: 110px;
   }
+}
+
+.button__pipaluk:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+  border: 2px solid;
+}
+
+.button__black__outline:hover {
+  border-color: #01b3a7;
+  background-color: #01b3a7;
+  color: #000;
 }/*# sourceMappingURL=main.min.css.map */

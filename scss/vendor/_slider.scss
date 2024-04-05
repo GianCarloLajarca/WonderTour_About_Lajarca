@@ -26,6 +26,7 @@
 .destinations {
     .tns-outer {
         position: relative;  
+        
        .tns-nav {
             position: absolute;
             bottom: 0;
@@ -58,6 +59,10 @@
                 outline: none;
                 transition: .2s;
             }
+
+            button:hover {
+                background-color: $clr-dark;
+            }
     
             & button.tns-nav-active {
                 background-color: $clr-accent;
@@ -74,6 +79,7 @@
 .testimonials {
     .tns-outer {
         position: relative;  
+        z-index: 3;
         overflow: hidden;
         -webkit-transform: translate3d(0px, 0px, 0px);
 
@@ -109,7 +115,11 @@
                 outline: none;
                 transition: .2s;
             }
-    
+            
+            button:hover {
+                background-color: $clr-dark;
+            }
+
             & button.tns-nav-active {
                 background-color: $clr-accent;
             }
@@ -189,6 +199,11 @@
       
       border: none;
       color: #cdcdcd
+    }
+
+    button:hover {
+        color: $clr-accent;
+        transition: .33s all ease;
     }
 
 }

@@ -216,7 +216,7 @@
                     </div>
 
                     <div class="destinations__caption">
-                        <a class="fl-bigmug-line-zoom60" href="#">
+                        <a class="destinations__icon"  href="#">
                             <img src="images/gallery-image-12-420x308.jpg" alt="" width="420" height="308">  
                         </a>
                     </div>
@@ -241,7 +241,7 @@
                 </div>
 
                 <div class="destinations__caption">
-                    <a href="#">
+                    <a class="destinations__icon" href="#">
                         <img src="images/gallery-image-13-420x308.jpg" alt="" width="420" height="308">  
                     </a>
                 </div>
@@ -266,7 +266,7 @@
                 </div>
 
                 <div class="destinations__caption">
-                    <a href="#">
+                    <a class="destinations__icon" href="#">
                         <img src="images/gallery-image-12-420x308.jpg" alt="" width="420" height="308">  
                     </a>
                 </div>
@@ -291,7 +291,7 @@
                 </div>
 
                 <div class="destinations__caption">
-                    <a href="#">
+                    <a  class="destinations__icon" href="#">
                         <img src="images/gallery-image-14-420x308.jpg" alt="" width="420" height="308">  
                     </a>
                 </div>
@@ -316,7 +316,7 @@
                 </div>
 
                 <div class="destinations__caption">
-                    <a href="#">
+                    <a class="destinations__icon" href="#">
                         <img src="images/gallery-image-15-420x308.jpg" alt="" width="420" height="308">  
                     </a>
                 </div>
@@ -341,7 +341,7 @@
                 </div>
 
                 <div class="destinations__caption">
-                    <a href="#">
+                    <a class="destinations__icon" href="#">
                         <img src="images/gallery-image-16-420x308.jpg" alt="" width="420" height="308">  
                     </a>
                 </div>
@@ -531,25 +531,31 @@
           1200: {
             items: 4,
             gutter: 30,
-            nav: false,
-            
+            nav: false,  
+            controls: false,
           },
-          
-        //   280: {
-        //     items: 4,
-        //     gutter: 30,
-        //     nav: true,
-            
-        //   },
 
-        //   768: {
-        //     items: 2,
-        //   }
+          200: {
+            items: 1,
+            gutter: 30,
+            nav: true,  
+            controls: false,
+          },
 
-        //   992 {
-        //     items 3,
-        //   }
+          1600: {
+            items: 4,
+            gutter: 30,
+            nav: false, 
+            controls: true,
+          }
         },
+
+        768: {
+            items: 2,
+            gutter: 20,
+            nav:true,
+            controls: false,
+        }
         
       });
 

@@ -98,6 +98,10 @@
             transition: all 0.3s ease-in-out;
         }
 
+        a:hover {
+            text-decoration: underline;
+        }
+
         li:nth-child(1)::after {
             content: "/";
             display: inline-block;
@@ -293,15 +297,16 @@
             @include mediaQuery__xl {
                 font-size: 64px;
                 line-height: 1.2;
+                text-align: left;
             }
 
-            @include mediaQuery__lg {
-                font-size: 54px;
-            }
+            // @include mediaQuery__lg {
+            //     font-size: 54px;
+            // }
 
-            @include mediaQuery__md {
-                font-size: 46px;
-            }
+            // @include mediaQuery__md {
+            //     font-size: 46px;
+            // }
 
             letter-spacing: .025rem;
             color: rgba(21, 21, 21, 0.09);
@@ -325,6 +330,11 @@
     }
 
     .nav {
+        @include mediaQuery__xxl {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
         padding-left: 1rem;
         padding-right: 1rem;    
         padding-top: 0.5rem;
@@ -388,7 +398,7 @@
           border-width: 1px 0 1px 0;
           border-style: solid;
           border-color: #e1e1e1;
-  
+        
           padding: 10px 10px 6px;
           text-transform: uppercase;
           font-size: 20px;
@@ -419,7 +429,7 @@
         }
 
         &__link:hover {
-            color: $clr-dark-accent;
+            color: $clr-accent;
         }
 
         &__link::after {
@@ -907,6 +917,7 @@
         color: #151515;
     }
 
+    
     &__item__content {
         text-align: center;
         overflow: hidden;
@@ -916,6 +927,30 @@
 
         display: block;
     }
+
+    &__item__content:hover::before {
+        @include mediaQuery__lg {
+           opacity: 1;
+           visibility: visible; 
+        }
+    }
+        &__item__content:hover::after {
+            @include mediaQuery__lg {
+               opacity: 1;
+               visibility: visible; 
+               transform: none;
+            }
+        }
+
+        &__item__content:hover .destinations__icon {
+            @include mediaQuery__lg {
+               opacity: 1;
+               visibility: visible; 
+               transform: none;
+            }
+        }
+
+        
 
     &__item__content::before {
         @include mediaQuery__lg {
@@ -938,11 +973,11 @@
     }
 
     &__item__content::after {
-        // @include mediaQuery__md {
-        //     transform: scale(0.85);
-        //     opacity: 0;
-        //     visibility: hidden;
-        // }
+        @include mediaQuery__md {
+            transform: scale(0.85);
+            opacity: 0;
+            visibility: hidden;
+        }
 
         display: inline-block;
         top: 10px;
@@ -996,12 +1031,12 @@
         box-sizing: border-box;
 
         a {
-            // @include mediaQuery__lg {
-            //     transform: translate3d(0, -10px, 0);
-            //     opacity: 0;
-            //     visibility: hidden;
-            //     transition: all .3s ease;
-            // }
+            @include mediaQuery__lg {
+                transform: translate3d(0, -10px, 0);
+                opacity: 0;
+                visibility: hidden;
+                transition: all .3s ease;
+            }
             
             color: $clr-light;
             font-size: 36px;
@@ -1083,9 +1118,15 @@
     }
 
     h3 {
+        @include mediaQuery__lg {
+            font-size: 36px;
+            line-height: 1.2;
+        } 
+
+        text-align: center;         
         font-size: 28px;
         line-height: 1.2;
-        white-space: nowrap;
+        // white-space: nowrap;
 
     }
 
@@ -1114,6 +1155,17 @@
         box-sizing: border-box;
     }
 
+    &__slider__item:nth-child(1) {
+
+        .testimonials__quote__text {
+            p {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+
+    }
+
     &__slider__item:hover .destinations__item__content::before {
         @include mediaQuery__lg {
         opacity: 100;
@@ -1122,12 +1174,22 @@
     }
 
     &__quote {
+        @include mediaQuery__lg {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        } 
+
+        @include mediaQuery__sm {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
         text-align: center;
         padding: 30px 10px;
         letter-spacing: .025em;
         background: #ffffff;
         box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.17);
-
+        
         box-sizing: border-box;
         display: block;
 
@@ -1135,7 +1197,6 @@
             max-width: 880px;
             margin-left: auto;
             margin-right: auto;
-
             box-sizing: border-box;
             display: block;
         }
@@ -1520,4 +1581,18 @@
             color: $clr-light;
         }
     }
+}
+
+// BUTTON HOVER
+.button__pipaluk:hover {
+    background-color: $clr-light;
+    color: $clr-dark;
+    border-color: $clr-dark;
+    border: 2px solid;
+}
+
+.button__black__outline:hover {
+    border-color: $clr-accent;
+    background-color: $clr-accent;
+    color: $clr-dark;
 }
