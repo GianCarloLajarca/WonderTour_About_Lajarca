@@ -28,7 +28,10 @@
 // }
 
 .button {
+    position: relative;
+    overflow: hidden;
     min-width: 200px;
+    border: 2px solid;
     font-size: 16px;
     line-height: 1.34;
     font-family: "Montserrat", sans-serif, Arial, sans-serif;
@@ -55,6 +58,10 @@
     border-color: #151515;
     padding: 16px 33px 16px;
     border: 2px solid;
+
+    text-overflow: ellipsis;
+    position: relative;
+    overflow: hidden;
 }
 
 .button__pipaluk {
@@ -104,6 +111,58 @@
     min-width: 140px;
     font-size: 16px;
     line-height: 1.5;
+    text-overflow: ellipsis;
     
 }
 
+// BACK TO TOP BUTTON
+
+.back-top {
+    right: 15px;
+    bottom: 15px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 38px;
+    color: #ffffff;
+    background: #01b3a7;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+.back-top:hover {
+    background: $clr-dark;
+}
+
+.back-top.sticky {
+    position: fixed;
+    z-index: 9999;
+}
+
+.back-top a {
+    display: inline-block;
+    font-family: 'FontAwesome';
+    scroll-behavior: smooth;
+}
+
+.back-top i {
+    font-weight: 400;
+    color: $clr-light;
+    font-size: 15px;
+    line-height: 38px;
+    text-align: center;
+    font-family: 'FontAwesome';
+    content: "\f106";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+
+.sticky {
+    position: fixed;
+    transition: all 0.3s ease-in;
+}

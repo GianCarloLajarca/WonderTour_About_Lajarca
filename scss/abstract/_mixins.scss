@@ -41,6 +41,13 @@
     }
 }
 
+// XXXL
+@mixin mediaQuery__xxxl($width:$xxxl) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
 
 
 // own utility for desktop first
@@ -53,6 +60,13 @@
 
 // XL
 @mixin mediaQueryMax__xl($width:$xl) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// XXXL
+@mixin mediaQueryMax__xxxl($width:$xxxl) {
     @media (max-width:$width) {
         @content;
     }

@@ -26,10 +26,16 @@
 .destinations {
     .tns-outer {
         position: relative;  
+
+        z-index: 3;
+        -webkit-transform: translate3d(0px, 0px, 0px);
+
+        box-sizing: border-box;
+        padding-bottom: 15px;
         
        .tns-nav {
             position: absolute;
-            bottom: 0;
+            bottom: -39px;
             margin-top: 40px;
             text-align: center;
             font-size: 0;
@@ -38,9 +44,9 @@
             box-sizing: border-box;
         
             // transform: translate(-50%);
-            top: 28rem;
+            // top: 35rem;
             // left: 50%;
-            z-index: 10;
+            // z-index: 10;
     
             button {
                 @include mediaQuery__lg {
@@ -54,10 +60,11 @@
                 height: 12px;
                 border: none;
                 border-radius: 0;
-                margin-left: 6px;
-                margin-right: 6px;
+                margin-left: 4px;
+                margin-right: 4px;
                 outline: none;
                 transition: .2s;
+                background-color: #9b9b9b;
             }
 
             button:hover {
@@ -87,6 +94,7 @@
 
         padding-top: 19px;
         padding-bottom: 15px;
+        
        .tns-nav {
             position: absolute;
             bottom: 0;
@@ -110,10 +118,11 @@
                 height: 12px;
                 border: none;
                 border-radius: 0;
-                margin-left: 6px;
-                margin-right: 6px;
+                margin-left: 4px;
+                margin-right: 4px;
                 outline: none;
                 transition: .2s;
+                background-color: #9b9b9b;
             }
             
             button:hover {
@@ -157,39 +166,26 @@
 }
 
 .tns-controls {
-    // @include flex (space-between, center);
-    // margin: 2rem 0;
-    // button {
-    //     background: transparent;
-    //     border: none;
-    //     font-size: 3rem;
-    //     color: $clr-light;
-    // }
-
-//     @include mediaQueryMax {
-//         position: static;
-//         @include flex (space-between, center);
-//        margin: 2rem 0;
-//        button {
-//         @include mediaQueryMax {
-//             font-size: 1.5rem;
-//         }
-
-//            background: transparent;
-//            border: none;
-//            font-size: 3rem;
-//            color: $clr-dark;
-//         }
-//    }
+   
 
     position: absolute;
-
+    
+    display: flex;
+   
     @include mediaQuery__xxl {
         top: 15rem;
         bottom: 30rem;
         left: -6rem;
         display: flex ;
-        gap: 181rem;
+        gap: 176.5rem;
+    }
+
+    @include mediaQueryMax__xxxl {
+        top: 15rem;
+        bottom: 30rem;
+        left: -6rem;
+        display: flex ;
+        gap: 152rem;
     }
 
     z-index: 999;
@@ -200,10 +196,156 @@
       border: none;
       color: #cdcdcd
     }
-
+    
     button:hover {
         color: $clr-accent;
         transition: .33s all ease;
     }
 
+}
+
+// PREVIOUS BUTTON
+
+.tns-controls button:first-child {
+    display: flex;
+    flex-direction: row-reverse;
+    line-height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 40px;
+    width: 54px;
+
+    background-color: transparent;
+    font: 400 46px / 50px 'FontAwesome';
+    color: #cccccc;
+    outline: none;
+    text-transform: none;
+    
+}
+
+
+
+.tns-controls button:first-child::before{
+    height: 2px;
+    width: 32px;
+    background-color: rgba(21, 21, 21, 0.21);
+
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    margin-left: 5px;
+
+  }
+
+  .tns-controls button:first-child::after {
+    border-width: 5px 8px 5px 0;
+    border-color: transparent rgba(21, 21, 21, 0.21) transparent transparent;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+  }
+
+    .tns-controls button:first-child:hover {
+        color: #01b3a7;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+  .tns-controls button:first-child:hover::after  {
+    border-left-color: #01b3a7;
+    border-right-color: #01b3a7;
+  }
+
+  .tns-controls button:first-child:hover::before {
+    background-color: #01b3a7;
+    margin-left: 10px;
+  }
+  
+
+//   NEXT BUTTON 
+.tns-controls button:last-child {
+    display: flex;
+    
+    line-height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 40px;
+    width: 54px;
+
+    background-color: transparent;
+    font: 400 46px / 50px 'FontAwesome';
+    color: #cccccc;
+    outline: none;
+    text-transform: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    
+}
+
+
+.tns-controls button:last-child::before{
+    height: 2px;
+    width: 32px;
+    background-color: rgba(21, 21, 21, 0.21);
+
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+
+    margin-right: 5px;
+
+    box-sizing: border-box;
+
+    font-size: 0;
+    line-height: 40px;
+
+  }
+
+  .tns-controls button:last-child::after {
+    border-width: 5px 0 5px 8px;
+    border-color: transparent transparent transparent rgba(21, 21, 21, 0.21);
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    font-size: 0;
+    line-height: 40px;
+  }
+
+  .tns-controls button:last-child:hover {
+    color: #01b3a7;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+    .tns-controls button:last-child:hover::after  {
+    border-left-color: #01b3a7;
+    border-right-color: #01b3a7;
+    }
+
+.tns-controls button:last-child:hover::before {
+    background-color: #01b3a7;
+    margin-right: 10px;
+    width: 32px;
+    padding-left: 10px;
 }
